@@ -24,6 +24,10 @@ import io.github.pancake.app.builder.ParameterMapBuilder;
 import io.github.pancake.app.builder.UrlBuilder;
 import io.github.pancake.app.validation.RequestValidator;
 
+/**
+ * Test class for {@link OrderServlet}.
+ * @author Bence_Kornis
+ */
 public class OrderServletTest {
     private static final String ORDER_PATH = "order";
     private static final String CONFIRMATION_PATH = "confirmation";

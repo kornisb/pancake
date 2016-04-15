@@ -14,6 +14,10 @@ import org.testng.annotations.Test;
 
 import io.github.pancake.persistence.base.Pancake;
 
+/**
+ * Test class for {@link RequestValidator}.
+ * @author Bence_Kornis
+ */
 public class RequestValidatorTest {
     private static final int LIMIT = Pancake.values().length;
     private RequestValidator underTest;

@@ -14,6 +14,10 @@ import org.mockito.Mock;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+/**
+ * Test class for {@link ParameterMapBuilder}.
+ * @author Bence_Kornis
+ */
 public class ParameterMapBuilderTest {
     private static final String KEY = "key";
     private static final String VALUE = "value";

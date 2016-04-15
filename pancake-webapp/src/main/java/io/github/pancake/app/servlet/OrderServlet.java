@@ -19,8 +19,7 @@ import io.github.pancake.app.builder.UrlBuilder;
 import io.github.pancake.app.validation.RequestValidator;
 
 /**
- * Demo servlet serving pancake form submission.
- *
+ * Servlet serving pancake ordering form.
  * @author Bence_Kornis
  */
 public class OrderServlet extends HttpServlet {

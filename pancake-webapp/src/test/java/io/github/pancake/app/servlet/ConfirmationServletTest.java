@@ -19,6 +19,10 @@ import org.testng.annotations.Test;
 
 import io.github.pancake.service.PancakeService;
 
+/**
+ * Test class for {@link ConfirmationServlet}.
+ * @author Bence_Kornis
+ */
 public class ConfirmationServletTest {
     @InjectMocks
     private ConfirmationServlet underTest;

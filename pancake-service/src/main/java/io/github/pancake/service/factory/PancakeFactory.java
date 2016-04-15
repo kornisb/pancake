@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import io.github.pancake.persistence.base.Pancake;
 
 /**
- * Factory bean of List of Pancake which contains all possible values of {@link Pancake} enum.
+ * Factory bean of {@link List} of {@link Pancake} which contains all possible values of {@link Pancake} enum.
  * @author Bence_Kornis
  */
 @Component

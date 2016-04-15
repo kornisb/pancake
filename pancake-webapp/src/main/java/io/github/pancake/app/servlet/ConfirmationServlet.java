@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Servlet serving static confirmation content when pancake order submitted successfully.
+ * @author Bence_Kornis
+ */
 public class ConfirmationServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

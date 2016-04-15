@@ -9,7 +9,7 @@ import io.github.pancake.persistence.base.Pancake;
 import io.github.pancake.service.factory.PancakeFactory;
 
 /**
- * Service to get pancake types.
+ * Service to get {@link Pancake} enum types.
  * @author Bence_Kornis
  */
 @Service

@@ -14,7 +14,6 @@ import io.github.pancake.service.factory.PancakeFactory;
 
 /**
  * Test class for {@link PancakeService}.
- *
  * @author Bence_Kornis
  */
 public class PancakeServiceTest {

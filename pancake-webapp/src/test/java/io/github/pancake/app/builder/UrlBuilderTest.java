@@ -8,6 +8,10 @@ import java.util.Map;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+/**
+ * Test class for {@link UrlBuilder}.
+ * @author Bence_Kornis
+ */
 public class UrlBuilderTest {
     private UrlBuilder underTest;
 
