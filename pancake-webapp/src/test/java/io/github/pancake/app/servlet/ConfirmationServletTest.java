@@ -1,4 +1,10 @@
-package io.github.pancake.app;
+package io.github.pancake.app.servlet;
+
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.initMocks;
 
 import java.io.PrintWriter;
 import java.util.Collections;
@@ -8,21 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.github.pancake.service.PancakeService;
 
-/**
- * Test class for {@link ServletDemo}
- *
- * @author Bence_Kornis
- */
-public class ServletDemoTest {
+public class ConfirmationServletTest {
     @InjectMocks
-    private ServletDemo underTest;
+    private ConfirmationServlet underTest;
     @Mock
     private HttpServletRequest mockRequest;
     @Mock
@@ -34,19 +33,17 @@ public class ServletDemoTest {
 
     @BeforeMethod
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
+        initMocks(this);
     }
 
     @Test
     public void testDoGetShouldPrintStaticContentWhenInvoked() throws Exception {
         // GIVEN
-        Mockito.when(mockResponse.getWriter()).thenReturn(mockPrintWriter);
-        Mockito.when(mockPancakeService.getAccessiblePancakeTypes()).thenReturn(Collections.emptyList());
-
+        when(mockResponse.getWriter()).thenReturn(mockPrintWriter);
+        when(mockPancakeService.getAvailablePancakes()).thenReturn(Collections.emptyList());
         // WHEN
         underTest.doGet(mockRequest, mockResponse);
-
         // THEN
-        Mockito.verify(mockPrintWriter, Mockito.atLeastOnce()).println(Mockito.anyString());
+        verify(mockPrintWriter, times(3)).println(anyString());
     }
 }

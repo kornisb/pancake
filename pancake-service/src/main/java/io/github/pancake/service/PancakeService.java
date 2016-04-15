@@ -1,24 +1,27 @@
 package io.github.pancake.service;
 
-import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.github.pancake.persistence.base.Pancake;
+import io.github.pancake.service.factory.PancakeFactory;
 
 /**
- * Service to get pancake types
- *
+ * Service to get pancake types.
  * @author Bence_Kornis
  */
 @Service
 public class PancakeService {
-    /**
-     * Get all accesible pancake types
-     * @return list of {@link Pancake}.
-     */
-    public List<Pancake> getAccessiblePancakeTypes() {
-        return Arrays.asList(Pancake.values());
+    private final PancakeFactory pancakeFactory;
+
+    @Autowired
+    public PancakeService(PancakeFactory pancakeFactory) {
+        this.pancakeFactory = pancakeFactory;
+    }
+
+    public List<Pancake> getAvailablePancakes() {
+        return pancakeFactory.getObject();
     }
 }

@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.pancake</groupId>
 	<artifactId>pancake</artifactId>
-	<version>1.0</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -21,9 +21,6 @@
 		<!-- Logging -->
 		<jcl.slf4j.version>1.7.19</jcl.slf4j.version>
 		<logback.version>1.1.6</logback.version>
-		<!-- Testing -->
-		<mockito.version>1.10.19</mockito.version>
-		<testng.version>6.9.10</testng.version>
 		<!-- Servlet API -->
 		<servlet.version>3.1.0</servlet.version>
 		<!-- Spring -->
@@ -32,7 +29,10 @@
 		<skip.unit.tests>false</skip.unit.tests>
 		<!-- Modules -->
 		<pancake.persistence.version>1.0</pancake.persistence.version>
-		<pancakeapp.version>1.0</pancakeapp.version>
+		<pancakeapp.version>1.0-SNAPSHOT</pancakeapp.version>
+		<!-- Testing -->
+		<mockito.version>1.10.19</mockito.version>
+		<testng.version>6.9.10</testng.version>
 	</properties>
 
 	<dependencyManagement>

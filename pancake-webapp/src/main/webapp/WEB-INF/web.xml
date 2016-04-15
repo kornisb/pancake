@@ -12,11 +12,19 @@
 		<param-value>classpath:conf/spring/application-context.xml</param-value>
 	</context-param>
 	<servlet>
-		<servlet-name>pancake-webapp</servlet-name>
-		<servlet-class>io.github.pancake.app.ServletDemo</servlet-class>
+		<servlet-name>pancake-webapp-order</servlet-name>
+		<servlet-class>io.github.pancake.app.servlet.OrderServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>pancake-webapp-confirmation</servlet-name>
+		<servlet-class>io.github.pancake.app.servlet.ConfirmationServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>pancake-webapp</servlet-name>
-		<url-pattern>/</url-pattern>
+		<servlet-name>pancake-webapp-order</servlet-name>
+		<url-pattern>/order</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>pancake-webapp-confirmation</servlet-name>
+		<url-pattern>/confirmation</url-pattern>
 	</servlet-mapping>
 </web-app>

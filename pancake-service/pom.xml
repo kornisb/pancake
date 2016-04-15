@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>io.github.pancake</groupId>
 		<artifactId>pancake</artifactId>
-		<version>1.0</version>
+		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>pancake-service</artifactId>
 
@@ -16,6 +16,16 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+		</dependency>
+		<!-- Modules -->
+		<dependency>
+			<groupId>io.github.pancake.persistence</groupId>
+			<artifactId>io-github-pancake-persistence-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.pancake.persistence</groupId>
+			<artifactId>io-github-pancake-persistence-impl</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<!-- Testing -->
 		<dependency>
@@ -27,15 +37,6 @@
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<!-- Modules -->
-		<dependency>
-			<groupId>io.github.pancake.persistence</groupId>
-			<artifactId>io-github-pancake-persistence-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.github.pancake.persistence</groupId>
-			<artifactId>io-github-pancake-persistence-impl</artifactId>
 		</dependency>
 	</dependencies>
 

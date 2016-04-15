@@ -1,40 +1,39 @@
 package io.github.pancake;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import static org.mockito.Mockito.only;
+import static org.mockito.Mockito.verify;
+import static org.mockito.MockitoAnnotations.initMocks;
 
-import org.testng.Assert;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import io.github.pancake.persistence.base.Pancake;
 import io.github.pancake.service.PancakeService;
+import io.github.pancake.service.factory.PancakeFactory;
 
 /**
- * Test class for {@link PancakeService}
+ * Test class for {@link PancakeService}.
  *
  * @author Bence_Kornis
  */
 public class PancakeServiceTest {
+    @InjectMocks
     private PancakeService underTest;
+    @Mock
+    private PancakeFactory mockPancakeFactory;
 
     @BeforeMethod
     public void setUp() {
-        underTest = new PancakeService();
+        initMocks(this);
     }
 
     @Test
-    public void testServiceShouldReturnPancakeTypes() {
-        // GIVEN
-        List<Pancake> pancakeTypes = new ArrayList<>(
-                Arrays.asList(Pancake.COCOA, Pancake.COTTAGE_CHEES, Pancake.CINNAMON, Pancake.NUTELLA));
-
+    public void testGetPancakesShouldReturnAvailablePancakesWhenInvoked() {
+        // GIVEN in setUp
         // WHEN
-        List<Pancake> pancakeTypesFromService = underTest.getAccessiblePancakeTypes();
-
+        underTest.getAvailablePancakes();
         // THEN
-        Assert.assertTrue(pancakeTypes.size() == pancakeTypesFromService.size());
-        Assert.assertTrue(pancakeTypesFromService.containsAll(pancakeTypes));
+        verify(mockPancakeFactory,only()).getObject();
     }
 }
