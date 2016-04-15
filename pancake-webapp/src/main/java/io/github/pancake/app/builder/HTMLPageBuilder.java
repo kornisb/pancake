@@ -15,9 +15,8 @@ import io.github.pancake.persistence.base.Pancake;
 import io.github.pancake.service.PancakeService;
 
 /**
- *
+ * Class for building Pancake ordering HTML page.
  * @author Bence_Kornis
- *
  */
 @Component
 public class HTMLPageBuilder {
@@ -31,6 +30,12 @@ public class HTMLPageBuilder {
     @Autowired
     private PancakeService pancakeService;
 
+    /**
+     * Builds the HTML page with usage of PrintWriter
+     * @param request Builder uses HttpServletRequest parameters
+     * @param response Builder uses HttpServletResponse writer
+     * @throws IOException when access PrintWriter
+     */
     public void build(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Map<String, String[]> requestParameters = request.getParameterMap();
         PrintWriter out = response.getWriter();

@@ -15,7 +15,6 @@ import io.github.pancake.persistence.base.Pancake;
 
 /**
  * Test class for {@link PancakeFactory}.
- *
  * @author Bence_Kornis
  */
 public class PancakeFactoryTest {
@@ -29,7 +28,7 @@ public class PancakeFactoryTest {
     @Test
     public void testGetObjectShouldReturnPancakeTypesWhenInvoked() {
         // GIVEN
-        List<Pancake> pancakeTypes = new ArrayList<>(Arrays.asList(Pancake.COCOA, Pancake.COTTAGE_CHEES, Pancake.CINNAMON, Pancake.NUTELLA));
+        List<Pancake> pancakeTypes = new ArrayList<>(Arrays.asList(Pancake.values()));
         // WHEN
         List<Pancake> pancakeTypesFromFactory = underTest.getObject();
         // THEN
